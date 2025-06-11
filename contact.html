@@ -18,3 +18,32 @@
             </ul>
         </nav>
     </header>
+    <main>
+    <div class="contact-container">
+        <h2>Me Contacter</h2>
+        <form onsubmit="sendMail(event)">
+            <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+            <input type="email" name="email" id="email" placeholder="Votre email" required>
+            <textarea name="message" id="message" placeholder="Votre message" required></textarea>
+            <button type="submit" class="send-button">Envoyer</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Mon Portfolio - Tous droits réservés</p>
+</footer>
+
+<script>
+    function sendMail(event) {
+        event.preventDefault();
+        const nom = document.getElementById("nom").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        const mailtoLink = `mailto:ton.email@domaine.com?subject=Contact de ${encodeURIComponent(nom)}&body=Nom : ${encodeURIComponent(nom)}%0AEmail : ${encodeURIComponent(email)}%0AMessage : ${encodeURIComponent(message)}`;
+        window.location.href = mailtoLink;
+    }
+</script>
+</body>
+</html>
