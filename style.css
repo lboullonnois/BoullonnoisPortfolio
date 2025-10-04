@@ -5,7 +5,8 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    background: #000;
+    background: url('Nice.jpg') center center no-repeat fixed;
+    background-size: cover;
     color: #fff;
     min-height: 100vh;
     display: flex;
@@ -121,7 +122,7 @@ nav ul li a:hover::before {
     background-position: center;
     background-attachment: fixed;
     width: 100vw;
-    height: 70vh;
+    height: 84.9vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,6 +158,7 @@ nav ul li a:hover::before {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 60px;
     animation: fadeInWrapper 2s ease forwards;
 }
 
@@ -169,8 +171,8 @@ nav ul li a:hover::before {
 }
 
 .profile-photo {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -186,8 +188,8 @@ nav ul li a:hover::before {
 
 .text-container p {
     font-size: 18px;
-    max-width: 600px;
-    margin-top: 10px;
+    max-width: none;
+    margin-top: 10px auto;
     animation: slideIn 1s ease 1s forwards;
     animation-fill-mode: forwards;
     opacity: 1;
@@ -306,7 +308,7 @@ footer p {
             display: inline-block;
             margin: 15px auto 25px;
             padding: 10px 20px;
-            background-color: #ac0000;
+            background-color: #005a69;
             color: white;
             font-weight: bold;
             border: none;
@@ -319,67 +321,80 @@ footer p {
         .project-button:hover {
             background-color: #000000;
         }
+        
+        .pdf-section {
+                display: flex;
+                justify-content: center;
+                margin: 40px 0;
+            }
 
-.pdf-section {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-}
+            .pdf-box {
+                width: 80%;
+                max-width: 1000px;
+                background-color: rgba(255, 255, 255, 0.95);
+                border-radius: 12px;
+                box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
 
-        .pdf-box {
-            width: 80%;
-            max-width: 1000px;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+            .pdf-box iframe {
+                width: 100%;
+                height: 600px;
+                border: none;
+            }
 
-        .pdf-box iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-        }
+            .pdf-download {
+                margin: 15px;
+                padding: 10px 20px;
+                background-color: #007C91;
+                color: #fff;
+                font-weight: bold;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+            }
 
-        .pdf-download {
-            margin: 15px;
-            padding: 10px 20px;
-            background-color: #007C91;
-            color: #fff;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
+            .pdf-download:hover {
+                background-color: #004d5a;
+            }
+            .video-wrapper {
+                        display: flex;
+                        justify-content: center;
+                        margin: 50px 0 20px;
+                    }
 
-        .pdf-download:hover {
-            background-color: #004d5a;
-        }
-.video-wrapper {
-            display: flex;
-            justify-content: center;
-            margin: 50px 0 20px;
-        }
+                    .video-wrapper video {
+                        width: 800px;
+                        height: 450px;
+                        border-radius: 12px;
+                        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+                    }
 
-        .video-wrapper video {
-            width: 800px;
-            height: 450px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
+                    @media (max-width: 900px) {
+                        .pdf-box {
+                            width: 100%;
+                        }
+
+                        .video-wrapper video {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+       
 .contact-container {
-            max-width: 600px;
-            margin: 60px auto;
+            max-width: 800px;
+            margin: 100px auto;
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 15px 55px rgba(0, 0, 0, 0.2);
+           
         }
 
-        .contact-container h2 {
+        .contact-container h1 {
             text-align: center;
             color: #007C91;
             margin-bottom: 30px;
@@ -388,26 +403,28 @@ footer p {
         form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 30px;
         }
 
         input, textarea {
             padding: 12px;
-            border-radius: 8px;
+            border-radius: 30px;
             border: none;
-            font-size: 16px;
+            font-size: 23px;
             font-family: 'Montserrat', sans-serif;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 150px;
         }
 
         .send-button {
             background-color: #007C91;
             color: white;
+            border-radius: 30px;
+            font-size: 23px;
             font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -417,16 +434,208 @@ footer p {
             background-color: #00A8A8;
         }
 
-        @media (max-width: 900px) {
-            .pdf-box {
-                width: 100%;
-            }
-
-            .video-wrapper video {
-                width: 100%;
-                height: auto;
-            }
+.competences-section { 
+            padding: 50px 20px;              /* espace intérieur en haut/bas et côtés */
+            text-align: center;              /* centre le texte dans la section */
+            background-color: rgba(255, 255, 255, 0.6); /* fond blanc semi-transparent */
+            margin: 10px auto;               /* espace autour + centré horizontalement */
+            border-radius: 20px;             /* coins arrondis */
+            max-width: 1200px;               /* largeur max de la section */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* ombre pour donner du relief */
         }
+
+    .competences-section h1 {
+            color: #007C91;                  /* titre en bleu turquoise */
+            margin-bottom: 30px;             /* espace en dessous du titre */
+            font-size: 40px;                 /* taille du texte du titre */
+        }
+
+    /* Grille de compétences */
+    .competences-grid {
+            display: grid;                   /* mise en page en grille */
+            grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+            gap: 30px;                       /* espace entre les cartes */
+            justify-items: center;           /* centre les cartes dans chaque case */
+        }
+
+    /* Carte compétence */
+    .competence-card {
+            background-color: rgba(255, 255, 255, 0.75); /* fond blanc légèrement transparent */
+            border-radius: 16px;             /* coins arrondis */
+            padding: 20px;                   /* espace intérieur */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* petite ombre */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* animation douce au hover */
+        }
+
+    .competence-card:hover {
+            transform: translateY(-10px);    /* remonte légèrement la carte au survol */
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3); /* ombre plus marquée au survol */
+        }
+    
+   .competence-card ul {
+            list-style-type: disc;       /* puces rondes */
+            list-style-position: inside; /* puce collée au texte */
+            padding-left: 0;             /* pas de décalage en plus */
+            margin: 0;                   /* supprime les marges par défaut */
+            text-align: left;            /* texte aligné à gauche */
+        }
+
+        .competence-card li {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.3;            /* espace entre lignes */
+            margin: 2px 0;               /* petit espace entre chaque point */
+        }
+
+
+    .competence-card img {
+            width: 100%;                     /* image prend toute la largeur de la carte */
+            height: 150px;                   /* hauteur fixe */
+            object-fit: cover;               /* l’image garde ses proportions sans se déformer */
+            border-radius: 12px;             /* coins arrondis de l’image */
+            margin-bottom: 15px;             /* espace entre l’image et le texte */
+        }
+
+    .competence-card h2 {
+            color: #007C91;                  /* titre en bleu turquoise */
+            margin-bottom: 10px;             /* espace en dessous du titre */
+        }
+
+    .competence-card p {
+            font-size: 16px;                 /* taille du texte */
+            color: #333;                     /* texte gris foncé */
+            line-height: 1.4;               /* espacement vertical du texte */
+        }
+    /* Barre de progression */
+    .skill-bar {
+            width: 100%;                     /* barre prend toute la largeur */
+            height: 20px;                    /* hauteur de la jauge */
+            background: rgba(0, 0, 0, 0.1);  /* couleur de fond (gris clair transparent) */
+            border-radius: 10px;             /* coins arrondis */
+            overflow: hidden;                /* coupe tout dépassement */
+            margin-top: 15px;                /* espace au-dessus de la barre */
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); /* ombre interne */
+        }
+
+    .skill-level {
+            height: 100%;                    /* remplit la hauteur de la barre */
+            background: linear-gradient(90deg, #007C91, #00A8A8); /* dégradé turquoise */
+            color: white;                    /* texte en blanc (pourcentage) */
+            font-size: 12px;                 /* petite taille pour le pourcentage */
+            font-weight: bold;               /* texte en gras */
+            text-align: right;               /* texte aligné à droite dans la barre */
+            padding-right: 8px;              /* petit espace avant le bord droit */
+            line-height: 20px;               /* centre verticalement le texte */
+            border-radius: 10px 0 0 10px;    /* arrondis seulement à gauche */
+            transition: width 1s ease-in-out; /* animation fluide quand la largeur change */
+        }
+
+/* Section À propos */
+.apropos-section {
+            padding: 60px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            margin-top: 150px; /* décale vers le bas */
+        }
+
+        .apropos-section h1 {
+            text-align: center;
+            color: #007C91;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .apropos-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap; /* s’adapte en mobile */
+        }
+
+        .apropos-image img {
+            width: 300px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .apropos-texte {
+            flex: 1; /* prend l’espace restant */
+            text-align: left;
+            font-size: 20px;
+            color: #111;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif
+        }
+
+        .apropos-texte p {
+            background-color: rgba(255, 255, 255, 0.85); /* fond blanc semi-transparent */
+            padding: 8px 12px;           /* petit padding pour aérer */
+            border-radius: 8px;           /* coins arrondis */
+            margin-bottom: 10px;          /* espace entre les paragraphes */
+        }
+
+        .apropos-texte h2 {
+            margin-bottom: 15px;
+            color: #007C91;
+            font-family: 'Roboto', sans-serif
+        }
+
+        .apropos-texte ul {
+            padding-left: 0;            /* pas de décalage supplémentaire */
+            margin: 0;                  /* supprime les marges par défaut */
+            text-align: left;           /* texte aligné à gauche */
+        }
+
+        .apropos-texte li {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;           /* espace réduit entre les lignes */
+            margin: 20px 0;              /* petit espace vertical */
+        }
+
+        .linkedin-link {
+            display: flex;
+            justify-content: center;  /* centre horizontalement sur la page */
+            align-items: center;
+            margin-top: 30px;         /* espace au-dessus */
+        }
+
+        .linkedin-link a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;    /* supprime le soulignement */
+            color: #0077B5;           /* bleu LinkedIn */
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .linkedin-link a:hover {
+            color: #00A8A8;           /* couleur au survol */
+        }
+
+        .linkedin-logo {
+            width: 40px;               /* taille du logo */
+            height: 40px;
+            margin-right: 10px;        /* espace entre le logo et le texte */
+        }
+
+
+/* Responsive design pour écrans étroits */
+@media (max-width: 900px) {
+    .pdf-box {
+        width: 100%;                     /* PDF prend toute la largeur */
+    }
+
+    .video-wrapper video {
+        width: 100%;                     /* vidéo s’adapte à l’écran */
+        height: auto;                    /* hauteur proportionnelle */
+    }
+}
 
 @keyframes fadeInText {
     from {
