@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Projets</title>
+    <title>Portfolio Boullonnois</title>
     <link rel="icon" href="Blason_Nissa.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,12 +15,15 @@
                 <li><a href="projets.html">Projets</a></li>
                 <li><a href="competences.html">Compétences</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="CV_BOULLONNOIS_LUCA.pdf" class="cv-button" download="CV_BOULLONNOIS_LUCA.pdf">Télécharger mon CV</a></li>
             </ul>
         </nav>
     </header>
     <main>
+    <section id="accueil" class="home-section">
+    <div class="overlay">
     <div class="contact-container">
-        <h2>Me Contacter</h2>
+        <h1>Me Contacter</h1>
         <form onsubmit="sendMail(event)">
             <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
             <input type="email" name="email" id="email" placeholder="Votre email" required>
@@ -28,7 +31,9 @@
             <button type="submit" class="send-button">Envoyer</button>
         </form>
     </div>
-</main>
+    </div>
+    </section>
+    </main>
 
 <footer>
     <p>© 2025 Boullonnois Luca</p>
@@ -41,7 +46,7 @@
         const email = document.getElementById("email").value;
         const message = document.getElementById("message").value;
 
-        const mailtoLink = `mailto:ton.email@domaine.com?subject=Contact de ${encodeURIComponent(nom)}&body=Nom : ${encodeURIComponent(nom)}%0AEmail : ${encodeURIComponent(email)}%0AMessage : ${encodeURIComponent(message)}`;
+        const mailtoLink = `mailto:luca.boullonnois@gmail.com?subject=Contact de ${encodeURIComponent(nom)}&body=Nom : ${encodeURIComponent(nom)}%0AEmail : ${encodeURIComponent(email)}%0AMessage : ${encodeURIComponent(message)}`;
         window.location.href = mailtoLink;
     }
 </script>
