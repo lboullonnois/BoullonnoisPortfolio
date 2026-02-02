@@ -122,12 +122,13 @@ nav ul li a:hover::before {
     background-position: center;
     background-attachment: fixed;
     width: 100vw;
-    height: 84.9vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
+    padding-bottom: 50px;
 
 }
 
@@ -143,10 +144,7 @@ nav ul li a:hover::before {
 .overlay {
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.4)
-    ); 
+     
     justify-content: center;
     align-items: center;
     z-index: 2;
@@ -168,6 +166,7 @@ nav ul li a:hover::before {
     border-radius: 50%;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
+    display: inline-block;
 }
 
 .profile-photo {
@@ -175,6 +174,7 @@ nav ul li a:hover::before {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+    display: block;
 }
 
 .text-container h1 {
@@ -221,6 +221,20 @@ nav ul li a:hover::before {
     margin-top: 30px;
     flex-wrap: wrap;
 }
+.gallery a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-title {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+}
 
 .gallery img {
     width: 400px;
@@ -237,11 +251,13 @@ nav ul li a:hover::before {
 }
 
 
-footer {
-    text-align: center;
-    padding: 20px;
+footer {          
+    width: 100%;       /* Lui donne toute la largeur */
+    z-index: 1000;     /* S'assure qu'il passe au-dessus du contenu */
     background-color: #393f46;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
 }
 
 footer p {
@@ -258,19 +274,29 @@ footer p {
             background-attachment: fixed;
             display: flex;
             flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             justify-content: space-around;
             gap: 40px;
-            padding: 60px 20px;
+            padding: 60px 5%;
             background-color: rgba(255, 255, 255, 0.1);
         }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 50px;
+}
         .project-card {
             background-color: rgba(255, 255, 255, 0.85);
-            border-radius: 20px;
+            border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-            width: 45%;
-            min-width: 300px;
-            margin-bottom: 40px;
+            width: 100%;
+            min-width: 0;
+            margin-bottom: 0;
             overflow: hidden;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -286,22 +312,26 @@ footer p {
 
         .project-card img {
             width: 100%;
-            height: 200px;
+            height: 160px;
             object-fit: cover;
         }
 
         .project-content {
-            padding: 20px;
+            padding: 15px;
         }
 
         .project-content h3 {
             margin-top: 0;
+            font-size: 18px; /* Titre plus compact */
+            margin-bottom: 10px;
             color: #000000;
         }
 
         .project-content p {
-            color: #4b4b4b;
-            font-size: 15px;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.4;
+            text-shadow: none;
         }
 
         .project-button {
@@ -383,7 +413,24 @@ footer p {
                             height: auto;
                         }
                     }
-       
+.top-link-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 100px 0; /* Padding bas pour ne pas être caché par le footer */
+}
+
+.category-title {
+    width: 100%;
+    max-width: 1200px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-left: 5px solid #007C91;
+    padding-left: 15px;
+    margin: 40px 0 20px 0;
+    font-size: 28px;
+}
+
 .contact-container {
             max-width: 800px;
             margin: 100px auto;
@@ -434,14 +481,15 @@ footer p {
             background-color: #00A8A8;
         }
 
-.competences-section { 
-            padding: 50px 20px;              /* espace intérieur en haut/bas et côtés */
-            text-align: center;              /* centre le texte dans la section */
-            background-color: rgba(255, 255, 255, 0.6); /* fond blanc semi-transparent */
-            margin: 10px auto;               /* espace autour + centré horizontalement */
-            border-radius: 20px;             /* coins arrondis */
-            max-width: 1200px;               /* largeur max de la section */
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* ombre pour donner du relief */
+
+        .competences-section { 
+            padding: 50px 20px;
+            text-align: center;
+            background-color: transparent; 
+            box-shadow: none; 
+            margin: 10px auto;
+            max-width: 1200px;
+            height: auto;
         }
 
     .competences-section h1 {
@@ -452,32 +500,42 @@ footer p {
 
     /* Grille de compétences */
     .competences-grid {
-            display: grid;                   /* mise en page en grille */
-            grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
-            gap: 30px;                       /* espace entre les cartes */
-            justify-items: center;           /* centre les cartes dans chaque case */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* S'adapte tout seul */
+            gap: 25px;
+            
+            justify-items: center;
+            align-items: stretch;
         }
 
     /* Carte compétence */
     .competence-card {
-            background-color: rgba(255, 255, 255, 0.75); /* fond blanc légèrement transparent */
-            border-radius: 16px;             /* coins arrondis */
-            padding: 20px;                   /* espace intérieur */
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* petite ombre */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* animation douce au hover */
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 20px; /* Padding réduit */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column; /* Organise le contenu verticalement */
+            width: 100%; /* Prend toute la place de sa colonne */
+            box-sizing: border-box;
+            border: 2px solid #007C91;
+            background-color: #f0fbfc; /* Teinte légère pour la démarquer */
+            transform: scale(1.02);
         }
-
+        
     .competence-card:hover {
             transform: translateY(-10px);    /* remonte légèrement la carte au survol */
             box-shadow: 0 12px 30px rgba(0,0,0,0.3); /* ombre plus marquée au survol */
         }
     
    .competence-card ul {
-            list-style-type: disc;       /* puces rondes */
-            list-style-position: inside; /* puce collée au texte */
-            padding-left: 0;             /* pas de décalage en plus */
-            margin: 0;                   /* supprime les marges par défaut */
-            text-align: left;            /* texte aligné à gauche */
+            flex-grow: 1; /* Cette ligne est la clé : elle "pousse" tout ce qui est après vers le bas */
+            list-style-type: disc;
+            list-style-position: inside;
+            padding-left: 0;
+            margin: 10px 0 20px 0;
+            text-align: left;
         }
 
         .competence-card li {
@@ -490,14 +548,16 @@ footer p {
 
     .competence-card img {
             width: 100%;                     /* image prend toute la largeur de la carte */
-            height: 150px;                   /* hauteur fixe */
+            height: 180px;                   /* hauteur fixe */
             object-fit: cover;               /* l’image garde ses proportions sans se déformer */
             border-radius: 12px;             /* coins arrondis de l’image */
             margin-bottom: 15px;             /* espace entre l’image et le texte */
         }
 
     .competence-card h2 {
-            color: #007C91;                  /* titre en bleu turquoise */
+            color: #007C91;
+            font-size: 20px;
+            margin: 10px 0;                  /* titre en bleu turquoise */
             margin-bottom: 10px;             /* espace en dessous du titre */
         }
 
@@ -509,11 +569,11 @@ footer p {
     /* Barre de progression */
     .skill-bar {
             width: 100%;                     /* barre prend toute la largeur */
-            height: 20px;                    /* hauteur de la jauge */
+            height: 18px;                    /* hauteur de la jauge */
             background: rgba(0, 0, 0, 0.1);  /* couleur de fond (gris clair transparent) */
             border-radius: 10px;             /* coins arrondis */
             overflow: hidden;                /* coupe tout dépassement */
-            margin-top: 15px;                /* espace au-dessus de la barre */
+            margin-top: auto;                /* espace au-dessus de la barre */
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); /* ombre interne */
         }
 
@@ -521,9 +581,9 @@ footer p {
             height: 100%;                    /* remplit la hauteur de la barre */
             background: linear-gradient(90deg, #007C91, #00A8A8); /* dégradé turquoise */
             color: white;                    /* texte en blanc (pourcentage) */
-            font-size: 12px;                 /* petite taille pour le pourcentage */
+            font-size: 11px;                 /* petite taille pour le pourcentage */
             font-weight: bold;               /* texte en gras */
-            text-align: right;               /* texte aligné à droite dans la barre */
+            text-align: center;               /* texte aligné à droite dans la barre */
             padding-right: 8px;              /* petit espace avant le bord droit */
             line-height: 20px;               /* centre verticalement le texte */
             border-radius: 10px 0 0 10px;    /* arrondis seulement à gauche */
@@ -533,7 +593,7 @@ footer p {
 /* Section À propos */
 .apropos-section {
             padding: 60px 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.6);
             border-radius: 20px;
             max-width: 1200px;
             margin: 40px auto;
@@ -569,6 +629,11 @@ footer p {
             color: #111;
             line-height: 1.8;
             font-family: 'Roboto', sans-serif
+        }
+
+        .apropos-texte strong {
+            color: #007C91; /* Reprend ton bleu turquoise de référence */
+            font-weight: 600;
         }
 
         .apropos-texte p {
@@ -679,6 +744,20 @@ footer p {
         }
 }
 
+@media (max-width: 1024px) {
+    .competences-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablettes */
+    }
+}
+
+@media (max-width: 768px) {
+    .competences-grid {
+        grid-template-columns: 1fr; /* 1 seule colonne sur téléphone */
+    }
+    .competences-section {
+        margin: 20px;
+    }
+}
 
 
 

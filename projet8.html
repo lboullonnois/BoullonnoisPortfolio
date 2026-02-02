@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Boullonnois</title>
+    <link rel="icon" href="Blason_Nissa.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="CV_BOULLONNOIS_LUCA.pdf" class="cv-button" download="CV_BOULLONNOIS_LUCA.pdf">Télécharger mon CV</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="projects-container">
+        <div class="content-section" style="background-color: rgba(255, 255, 255, 0.6); border-radius: 20px; padding: 30px; max-width: 1100px; margin: 40px auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <h2>Pentest</h2>
+            <p>Ce projet de "pentesting" consistait à réaliser un audit de sécurité 
+                complet sur une infrastructure conteneurisée (Docker). L'objectif 
+                était de simuler une cyberattaque réelle en s'introduisant dans un 
+                premier réseau via l'exploitation de vulnérabilités (Samba, injections 
+                de commandes), puis de réaliser un pivot réseau grâce à un tunnel SSH 
+                et Proxychains pour atteindre une cible isolée. Le projet s'est conclu 
+                par la rédaction d'un rapport technique détaillant les failles identifiées 
+                et les préconisations de remédiation.</p>
+            <p>Cette expérience m'a permis de maîtriser les phases clés d'un test d'intrusion, 
+                de la reconnaissance avec Nmap à l'exploitation de failles critiques avec 
+                Metasploit. J'ai approfondi mes compétences techniques en matière de pivoting et de manipulation de services vulnérables comme DVWA ou 
+                VNC. Au-delà de l'aspect technique, ce projet a renforcé ma capacité à adopter 
+                une démarche éthique et rigoureuse, tout en apprenant à traduire des 
+                vulnérabilités complexes en recommandations de sécurité concrètes pour un 
+                administrateur système.</p>
+            <h3>Rapport du projet :</h3>
+            <div class="pdf-section">
+                <div class="pdf-box">
+                    <iframe src="RAPPORT_TEST_D'INTRUSION_BOULLONNOIS_LUCA_1B.pdf"></iframe>
+                    <a class="pdf-download" href="RAPPORT_TEST_D'INTRUSION_BOULLONNOIS_LUCA_1B.pdf" download>Télécharger le document</a>
+                </div>
+            </div>
+            <a href="projets.html" class="pdf-download">Revenir aux projets</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Boullonnois Luca</p>
+</footer>
+
+</body>
+</html>
