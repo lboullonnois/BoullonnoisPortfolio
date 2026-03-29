@@ -16,7 +16,6 @@
                 <li><a href="competences.html">Compétences</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="CV_BOULLONNOIS_LUCA.pdf" class="cv-button" download="CV_BOULLONNOIS_LUCA.pdf">Télécharger mon CV</a></li>
-
             </ul>
         </nav>
     </header>
@@ -24,97 +23,210 @@
         <section id="accueil" class="home-section">
         <div class="overlay">
         <section class="competences-section">
+            <h1>Mes Compétences</h1>
+            <p>Vous trouverez ici l'ensemble des compétences et certifications que j'ai pu acquérir au cours de ma formation. </p>
+            <h2 class="category-title">Cybersécurité</h2>
             <div class="competences-grid">
-                <!-- Carte 1 -->
-                 <div class="competence-card">
-                    <img src="cybersecurity.png" alt="Cybersécurité">
-                    <h2>Cybersécurité</h2>
+                <div class="competence-card">
+                    <img src="audit.jpg" alt="Cybersécurité - Audit">
+                    <h2>Audit</h2>
                     <ul>
-                        <li>Analyse de vulnérabilités et audits de sécurité (Nmap, Wireshark).</li>
+                        <li>Identification et analyse de failles critiques sur systèmes et réseaux.</li>
+                        <li>Simulation d'attaques, exploitation de failles et préconisations de remédiation.</li>
+                        <li>Investigation de trames et diagnostic de sécurité réseau via Wireshark.</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 60%;"></div></div>
+                </div>
+
+                <div class="competence-card">
+                    <img src="nmap.jpg" alt="Cybersécurité - Audit">
+                    <h2>Analyse</h2>
+                    <ul>
+                        <li>Analyse de vulnérabilités et audits de sécurité.</li>
+                        <li>Utilisation d'outils de scan (Nmap).</li>
+                        <li>Analyse de trames et capture réseau.</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+                </div>
+
+                <div class="competence-card">
+                    <img src="cybersecurity.png" alt="Cybersécurité - Infrastructure">
+                    <h2>Sécurité Infrastructure</h2>
+                    <ul>
                         <li>Sécurisation d'infrastructures : Pare-feu, VPN, DMZ.</li>
-                        <li>Gestion des accès : Protocoles d'authentification et chiffrement.</li>
-                        <li>Analyse de trames.</li>
+                        <li>Gestion des accès et protocoles d'authentification.</li>
+                        <li>Mise en place de solutions de chiffrement.</li>
                     </ul>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 65%;"></div>
-                    </div>
-                </div>
-
-                <div class="competence-card">
-                    <img src="Réseaux.jpg" alt="Réseaux">
-                    <h2>Techniques Réseaux</h2>
-                    <ul>
-                        <li>Configuration et administration de réseaux locaux (LAN, VLAN, routage statique/dynamique, OSPF).</li>
-                        <li>Mise en place de services réseau (DHCP, DNS, NAT, serveur Web).</li>
-                        <li>Sécurisation des réseaux (pare-feu, VPN, filtrage, DMZ).</li>
-                    </ul>    
-                    
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 60%;"></div>
-                    </div>
-                </div>
-
-                <!-- Carte 2 -->
-                <div class="competence-card">
-                    <img src="Linux.png" alt="Linux">
-                    <h2>Systèmes</h2>
-                    <ul>
-                        <li>Administration de systèmes Linux (gestion utilisateurs, sécurité, scripts).</li>
-                        <li>Virtualisation et usage de machines virtuelles (VirtualBox).</li>
-                        <li>Conteneurisation : Déploiement et gestion d'environnements isolés avec Docker et Docker Compose.</li>
-                    </ul>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 55%;"></div>
-                    </div>
-                </div>
-
-                <!-- Carte 3 -->
-                <div class="competence-card">
-                    <img src="Dev.png" alt="Développement">
-                    <h2>Développement</h2>
-                    <ul>
-                        <li>Programmation réseau (Python, scripts Bash, PHP pour services web).</li>
-                        <li>Bases de développement web et bases de données (SQL).</li>
-                        <li>Applications Communicantes : Développement de solutions pour la détection de vulnérabilités réseau et le pilotage d'équipements.</li>
-                    </ul>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 50%;"></div>
-                    </div>
-                </div>
-
-                <!-- Carte 4 -->
-                <div class="competence-card">
-                    <img src="Gestion.png" alt="Communication">
-                    <h2>Gestion de projet</h2>
-                    <ul>
-                        <li>Rédaction de documentation technique (rapports, cahier des charges).</li>
-                        <li>Travail en mode projet (méthodologie SMART, gestion d’équipe).</li>
-                        <li>Conduite de tests, diagnostic et résolution d’incidents.</li>
-                    </ul>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 65%;"></div>
-                    </div>
-                </div>
-
-                <div class="competence-card">
-                    <img src="ccna.png" alt="CCNA">
-                    <h2>Certifications</h2>
-                    <ul>
-                        <li><strong>CCNA 1</strong> Introduction to Networks : compétences en configuration de base des routeurs et commutateurs, ainsi qu'en adressage IPv4 et IPv6. </li>
-                        <li><strong>CCNA 2</strong> Switching, Routing, and Wireless Essentials: maîtrise des technologies de commutation (VLANs, STP), du routage statique et dynamique, ainsi que de la sécurisation des réseaux locaux et sans fil. </li>
-                    </ul>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 65%;"></div>
-                    </div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 60%;"></div></div>
                 </div>
             </div>
+
+            <h2 class="category-title">Réseaux & Télécoms</h2>
+            <div class="competences-grid">
+                <div class="competence-card">
+                    <img src="Réseaux.jpg" alt="Réseaux - Routage">
+                    <h2>Routage & Commutation</h2>
+                    <ul>
+                        <li>Configuration de réseaux locaux (LAN, VLAN).</li>
+                        <li>Mise en place de routage statique et dynamique.</li>
+                        <li>Maîtrise du protocole OSPF.</li>
+                    </ul>    
+                    <div class="skill-bar"><div class="skill-level" style="width: 65%;"></div></div>
+                </div>
+
+                <div class="competence-card">
+                    <img src="serveur.jpg" alt="Réseaux - Services">
+                    <h2>Services Réseaux</h2>
+                    <ul>
+                        <li>Déploiement de services réseau (DHCP, DNS, NAT).</li>
+                        <li>Mise en place et configuration de serveurs Web.</li>
+                        <li>Filtrage et sécurisation des accès réseau.</li>
+                    </ul>    
+                    <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+                </div>
+
+                <div class="competence-card">
+                    <img src="telecom.jpg" alt="Réseaux - Services">
+                    <h2>Télécommunications</h2>
+                    <ul>
+                        <li>Principes de propagation des ondes et supports physiques (Fibre, Cuivre).</li>
+                        <li>Échantillonnage, quantification et codage des signaux.</li>
+                        <li>Utilisation d'analyseurs de spectre et mesure de qualité de signal.</li>
+                    </ul>    
+                    <div class="skill-bar"><div class="skill-level" style="width: 55%;"></div></div>
+                </div>
+            </div>
+
+            <h2 class="category-title">Systèmes & Virtualisation</h2>
+            <div class="competences-grid">
+                <div class="competence-card">
+                    <img src="Linux.png" alt="Systèmes - Linux">
+                    <h2>Administration Linux</h2>
+                    <ul>
+                        <li>Gestion des utilisateurs et des droits d'accès.</li>
+                        <li>Sécurisation de base des systèmes d'exploitation.</li>
+                        <li>Automatisation de tâches via scripts Bash.</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+                </div>
+
+                <div class="competence-card">
+                    <img src="AD.jpg" alt="Systèmes - Linux">
+                    <h2>Windows Active directory</h2>
+                    <ul>
+                        <li>Gestion des utilisateurs, groupes et unités d'organisation (OU).</li>
+                        <li>Mise en place de stratégies de groupe et configurations centralisées.</li>
+                        <li>Déploiement de contrôleurs de domaine (AD DS) et DNS.</li>
+                        <li>Gestion des permissions et délégation de contrôle.</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+                </div>
+
+                <div class="competence-card">
+                    <img src="docker.jpg" alt="Systèmes - Virtualisation">
+                    <h2>Virtualisation & Conteneurs</h2>
+                    <ul>
+                        <li>Déploiement de machines virtuelles (VirtualBox).</li>
+                        <li>Conteneurisation d'applications avec Docker.</li>
+                        <li>Gestion d'environnements isolés via Docker Compose.</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 65%;"></div></div>
+                </div>
+            </div>
+
+            <h2 class="category-title">Développement & Scripting</h2>
+            <div class="competences-grid">
+                <div class="competence-card">
+                    <img src="PHP-MYSQL.png" alt="Développement Web">
+                    <h2>Développement Web</h2>
+                    <ul>
+                        <li>Bases de développement web pour la création de services.</li>
+                        <li>Utilisation de PHP pour la dynamique côté serveur.</li>
+                        <li>Création et gestion de bases de données (SQL).</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+                </div>
+
+                <div class="competence-card">
+                    <img src="Dev.png" alt="Développement - Scripting">
+                    <h2>Scripting & Apps Réseau</h2>
+                    <ul>
+                        <li>Programmation orientée réseau (Python).</li>
+                        <li>Développement de solutions pour la détection de vulnérabilités.</li>
+                        <li>Création d'applications communicantes pour le pilotage d'équipements.</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 40%;"></div></div>
+                </div>
+
+            <div class="competence-card">
+                    <img src="ps.jpeg" alt="Développement Web">
+                    <h2>Powershell</h2>
+                    <ul>
+                        <li>Création de scripts pour l'automatisation de tâches système.</li>
+                        <li>Gestion des utilisateurs et dossiers via fichiers CSV.</li>
+                        <li>Analyse de logs et vérification de l'intégrité du système.</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+                </div>
+            </div>
+
+            <h2 class="category-title">Gestion de Projet</h2>
+            <div class="competences-grid">
+                <div class="competence-card">
+                    <img src="Gestion.png" alt="Gestion de projet">
+                    <h2>Gestion de projet</h2>
+                    <ul>
+                        <li>Travail collaboratif en mode projet et gestion d’équipe.</li>
+                        <li>Application de la méthodologie SMART.</li>
+                        <li>Suivi de l'avancement et respect des délais.</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 55%;"></div></div>
+                </div>
+
+                <div class="competence-card">
+                    <img src="documentation.png" alt="Documentation">
+                    <h2>Documentation & Support</h2>
+                    <ul>
+                        <li>Rédaction de documentation technique exhaustive.</li>
+                        <li>Création de rapports et de cahiers des charges.</li>
+                        <li>Conduite de tests, diagnostic et résolution d’incidents.</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+                </div>
+            </div>
+
+            <h2 class="category-title">Certifications</h2>
+            <div class="competences-grid">
+                <div class="competence-card">
+                    <img src="ccna1.png" alt="CCNA 1">
+                    <h2>Certification CCNA 1</h2>
+                    <ul>
+                        <li><strong>Introduction to Networks :</strong> Compréhension architectures.</li>
+                        <li>Configuration de base des routeurs et commutateurs.</li>
+                        <li>Maîtrise de l'adressage IPv4 et IPv6.</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 100%;"></div></div>
+                </div>
+
+                <div class="competence-card">
+                    <img src="ccna2.png" alt="CCNA 2">
+                    <h2>Certification CCNA 2</h2>
+                    <ul>
+                        <li><strong>Switching, Routing, Wireless:</strong> Technologies (VLANs, STP).</li>
+                        <li>Configuration avancée du routage statique et dynamique.</li>
+                        <li>Sécurisation des réseaux locaux et sans fil (WLAN).</li>
+                    </ul>
+                    <div class="skill-bar"><div class="skill-level" style="width: 100%;"></div></div>
+                </div>
+            </div>
+
         </section>
         </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Boullonnois Luca</p>
+        <p>&copy; 2026 Boullonnois Luca</p>
     </footer>
 </body>
 </html>
